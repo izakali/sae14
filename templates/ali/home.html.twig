@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Accueil</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('cv') }}">Mon CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('E-Portfolio') }}">E-Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center mt-4">
+        <h1>Présentation de moi-même</h1>
+    </header>
+
+    <section class="container mt-4">
+        <h2>À Propos de Moi</h2>
+        <p>Étudiant en BUT RT à l'IUT de Roanne, je suis passionné par le
+            développement informatique et la cybersécurité. Je souhaite
+            contribuer à la sécurité des systèmes d'information. Mes
+            compétences en Python et en systèmes d'exploitation, ainsi que
+            mon goût pour le travail en équipe, me permettront de réussir
+            dans cette voie
+        </p>
+
+        <h2>Projets Futurs</h2>
+        <p>Passionné par la conception de solutions innovantes, je prévois de travailler sur des projets orientés vers 
+            la sécurité informatique. Mon objectif est de développer des outils et des systèmes qui renforcent 
+            la protection des données et des réseaux. Je suis particulièrement intéressé par 
+            [domaines spécifiques de la cybersécurité, par exemple, l'analyse des vulnérabilités, la détection d'intrusions ou la sécurité des applications web]. 
+            En combinant mes connaissances en Python, ma compréhension approfondie des systèmes d'exploitation, et ma passion pour résoudre 
+            des problèmes complexes, je compte contribuer de manière significative à la sécurité des systèmes d'information.
+        </p>
+
+        <div class="container">
+            <h2>Pour en savoir plus</h2>
+            <p>Découvrez mes loisirs, passions, et envies en cliquant sur le bouton ci-dessous.</p>
+            <a class="btn btn-primary" href="{{ path('en_savoir_plus') }}">En savoir plus</a>
+        </div>
+    </section>
+{% endblock %}

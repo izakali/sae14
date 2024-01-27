@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}En savoir plus{% endblock %}
+
+{% block body %}
+    <header class="text-center mt-4">
+        <h1>En savoir plus</h1>
+    </header>
+
+    <section class="container mt-4 d-flex flex-column align-items-center">
+        <div class="mb-3 text-center">
+            <h2>Mes Loisirs</h2>
+            <p class="lead">Dans mes loisirs, j'aime beaucoup jouer aux jeux vidéo, car ils me permettent de me détendre, de m'évader et de développer ma créativité. Je suis toujours à la recherche de nouveaux jeux qui me challengent et me font vivre des aventures passionnantes.</p>
+            <div class="text-center">
+                <img src="{{ asset('loisirs_image1.png') }}" alt="Loisirs Image 1" style="width: 410px; height: 500px;">
+            </div>
+        </div>
+
+        <div class="mb-3 text-center">
+            <h2>Mes Passions</h2>
+            <p class="lead">J'ai une passion pour la cybersécurité et le réseau car je suis convaincu que ce sont des domaines essentiels pour assurer la sécurité de notre monde numérique. Je suis déterminé à contribuer à protéger les systèmes informatiques des cyberattaques et à garantir que les individus et les entreprises puissent utiliser Internet en toute sécurité.</p>
+            <div class="text-center">
+                <img src="{{ asset('passion_image1.png') }}" alt="Passion Image 1" style="width: 410px; height: 280px;">
+                <img src="{{ asset('passion_image2.png') }}" alt="Passion Image 2" style="width: 410px; height: 280px;">
+            </div>
+        </div>
+
+        <div class="mb-3 text-center">
+            <h2>Mes Extras</h2>
+            <p class="lead">Dans mes extras, j'aime beaucoup voyager et explorer le monde, car cela me permet de me développer en tant que personne. J'apprends toujours de nouvelles choses sur différentes cultures, sur moi-même et sur le monde qui m'entoure. Je suis également passionné par la photographie et la vidéo, et j'aime immortaliser mes voyages pour pouvoir les partager avec les autres.</p>
+            <div class="text-center">
+                <img src="{{ asset('envies_image1.png') }}" alt="Envies Image 1" style="width: 410px; height: 280px;">
+                <img src="{{ asset('envies_image2.png') }}" alt="Envies Image 2" style="width: 410px; height: 280px;">
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center">
+        <a href="{{ path('app_ali') }}" class="btn btn-primary mt-3">Retour</a>
+    </div>
+{% endblock %}

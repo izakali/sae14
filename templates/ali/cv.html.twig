@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon CV{% endblock %}
+
+{% block body %}
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+       <div class="container-fluid">
+           <a class="navbar-brand" href="{{ path('app_ali') }}">Accueil</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                   <li class="nav-item">
+                       <a class="nav-link" href="{{ path('cv') }}">Mon CV</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="{{ path('E-Portfolio') }}">E-Portfolio</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+
+   <header class="text-center mt-4">
+       <h1>Veuillez renseigner vos informations ci-dessous pour le CV</h1>
+   </header>
+
+   <section class="container mt-4 d-flex align-items-center justify-content-center">
+       <form id="downloadForm" action="{{ path('cv_download') }}" method="post" class="w-50">
+           <div class="form-group mb-3">
+               <h1 class="text-center">Formulaire</h1>
+           </div>
+
+           <div class="form-group mb-3">
+               <label for="nom">Nom :</label>
+               <input type="text" id="nom" name="nom" required class="form-control">
+           </div>
+
+           <div class="form-group mb-3">
+               <label for="prenom">Prénom :</label>
+               <input type="text" id="prenom" name="prenom" required class="form-control">
+           </div>
+
+           <div class="form-group mb-3">
+               <label for="Entreprise">Entreprise :</label>
+               <input type="text" id="Entreprise" name="Entreprise" class="form-control">
+           </div>
+
+           <div class="form-group mb-3">
+               <label for="email">Email :</label>
+               <input type="email" id="email" name="email" required class="form-control">
+           </div>
+
+           <button type="button" class="btn btn-primary mt-3" onclick="submitForm()">Télécharger CV</button>
+       </form>
+   </section>
+
+   <script>
+       function submitForm() {
+           document.getElementById('downloadForm').method = 'get';
+           document.getElementById('downloadForm').submit();
+       }
+   </script>
+{% endblock %}
