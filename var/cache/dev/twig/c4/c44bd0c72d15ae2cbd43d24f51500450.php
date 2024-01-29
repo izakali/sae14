@@ -121,7 +121,7 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
        <form id=\"downloadForm\" action=\"";
         // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cv_download");
-        echo "\" method=\"post\" class=\"w-50\">
+        echo "\" method=\"post\" class=\"w-50\" onsubmit=\"return validateForm()\">
            <div class=\"form-group mb-3\">
                <h1 class=\"text-center\">Formulaire</h1>
            </div>
@@ -146,14 +146,22 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
                <input type=\"email\" id=\"email\" name=\"email\" required class=\"form-control\">
            </div>
 
-           <button type=\"button\" class=\"btn btn-primary mt-3\" onclick=\"submitForm()\">Télécharger CV</button>
+           <button type=\"submit\" class=\"btn btn-primary mt-3\">Télécharger CV</button>
        </form>
    </section>
 
    <script>
-       function submitForm() {
-           document.getElementById('downloadForm').method = 'get';
-           document.getElementById('downloadForm').submit();
+       function validateForm() {
+           var nom = document.getElementById('nom').value;
+           var prenom = document.getElementById('prenom').value;
+           var email = document.getElementById('email').value;
+
+           if (nom === '' || prenom === '' || email === '') {
+               alert('Veuillez remplir tous les champs du formulaire.');
+               return false; // Prevent form submission
+           }
+
+           return true;
        }
    </script>
 ";
@@ -220,7 +228,7 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
    </header>
 
    <section class=\"container mt-4 d-flex align-items-center justify-content-center\">
-       <form id=\"downloadForm\" action=\"{{ path('cv_download') }}\" method=\"post\" class=\"w-50\">
+       <form id=\"downloadForm\" action=\"{{ path('cv_download') }}\" method=\"post\" class=\"w-50\" onsubmit=\"return validateForm()\">
            <div class=\"form-group mb-3\">
                <h1 class=\"text-center\">Formulaire</h1>
            </div>
@@ -245,14 +253,22 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
                <input type=\"email\" id=\"email\" name=\"email\" required class=\"form-control\">
            </div>
 
-           <button type=\"button\" class=\"btn btn-primary mt-3\" onclick=\"submitForm()\">Télécharger CV</button>
+           <button type=\"submit\" class=\"btn btn-primary mt-3\">Télécharger CV</button>
        </form>
    </section>
 
    <script>
-       function submitForm() {
-           document.getElementById('downloadForm').method = 'get';
-           document.getElementById('downloadForm').submit();
+       function validateForm() {
+           var nom = document.getElementById('nom').value;
+           var prenom = document.getElementById('prenom').value;
+           var email = document.getElementById('email').value;
+
+           if (nom === '' || prenom === '' || email === '') {
+               alert('Veuillez remplir tous les champs du formulaire.');
+               return false; // Prevent form submission
+           }
+
+           return true;
        }
    </script>
 {% endblock %}

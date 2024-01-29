@@ -423,3 +423,9 @@ f320dd,127.0.0.1,GET,http://127.0.0.1:8000/E-Portfolio,1706368590,,200,request
 0f84fd,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706368592,,200,request
 a91129,127.0.0.1,GET,http://127.0.0.1:8000/,1706368593,,200,request
 ce7a4f,127.0.0.1,GET,http://127.0.0.1:8000/en_savoir_plus,1706368596,,200,request
+a88c4d,127.0.0.1,GET,http://127.0.0.1:8000/,1706451978,,200,request
+2e541a,127.0.0.1,GET,http://127.0.0.1:8000/en_savoir_plus,1706452068,,200,request
+de100b,127.0.0.1,GET,http://127.0.0.1:8000/,1706452202,,200,request
+3c6325,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706452203,,200,request
+dd3afc,127.0.0.1,GET,http://127.0.0.1:8000/cv/download?Entreprise=&email=&nom=&prenom=,1706452206,,200,request
+4f1c7f,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706452371,,200,request
