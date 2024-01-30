@@ -510,3 +510,7 @@ dfb8f2,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706603475,,200,request
 b0d0fd,127.0.0.1,POST,http://127.0.0.1:8000/cv/download,1706603489,,200,request
 04e367,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706603522,,200,request
 cd8433,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706603690,,200,request
+ff2cd6,127.0.0.1,GET,http://127.0.0.1:8000/cv,1706604282,,200,request
+4eb987,127.0.0.1,GET,http://127.0.0.1:8000/E-Portfolio,1706604283,,200,request
+e663fd,127.0.0.1,GET,http://127.0.0.1:8000/E-Portfolio,1706604317,,200,request
+cf5c85,127.0.0.1,GET,http://127.0.0.1:8000/E-Portfolio,1706604369,,200,request
