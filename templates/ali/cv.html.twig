@@ -27,7 +27,7 @@
    </header>
 
    <section class="container mt-4 d-flex align-items-center justify-content-center">
-       <form id="downloadForm" action="{{ path('cv_download') }}" method="post" class="w-50" onsubmit="return validateForm()">
+        <form id="downloadForm" action="{{ path('cv_download') }}" method="post" class="w-50" onsubmit="return validateForm(event) && submitForm()">
            <div class="form-group mb-3">
                <h1 class="text-center">Formulaire</h1>
            </div>
@@ -68,6 +68,10 @@
            }
 
            return true;
+       }
+       function submitForm() {
+           document.getElementById('downloadForm').method = 'get';
+           document.getElementById('downloadForm').submit();
        }
    </script>
 {% endblock %}

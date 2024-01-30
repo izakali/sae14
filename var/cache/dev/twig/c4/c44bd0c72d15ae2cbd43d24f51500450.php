@@ -118,10 +118,10 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
    </header>
 
    <section class=\"container mt-4 d-flex align-items-center justify-content-center\">
-       <form id=\"downloadForm\" action=\"";
+        <form id=\"downloadForm\" action=\"";
         // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cv_download");
-        echo "\" method=\"post\" class=\"w-50\" onsubmit=\"return validateForm()\">
+        echo "\" method=\"post\" class=\"w-50\" onsubmit=\"return validateForm(event) && submitForm()\">
            <div class=\"form-group mb-3\">
                <h1 class=\"text-center\">Formulaire</h1>
            </div>
@@ -158,10 +158,14 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
 
            if (nom === '' || prenom === '' || email === '') {
                alert('Veuillez remplir tous les champs du formulaire.');
-               return false; // Prevent form submission
+               return false;
            }
 
            return true;
+       }
+       function submitForm() {
+           document.getElementById('downloadForm').method = 'get';
+           document.getElementById('downloadForm').submit();
        }
    </script>
 ";
@@ -228,7 +232,7 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
    </header>
 
    <section class=\"container mt-4 d-flex align-items-center justify-content-center\">
-       <form id=\"downloadForm\" action=\"{{ path('cv_download') }}\" method=\"post\" class=\"w-50\" onsubmit=\"return validateForm()\">
+        <form id=\"downloadForm\" action=\"{{ path('cv_download') }}\" method=\"post\" class=\"w-50\" onsubmit=\"return validateForm(event) && submitForm()\">
            <div class=\"form-group mb-3\">
                <h1 class=\"text-center\">Formulaire</h1>
            </div>
@@ -265,10 +269,14 @@ class __TwigTemplate_1b981eca6efb71f35516743db20d9b3c extends Template
 
            if (nom === '' || prenom === '' || email === '') {
                alert('Veuillez remplir tous les champs du formulaire.');
-               return false; // Prevent form submission
+               return false;
            }
 
            return true;
+       }
+       function submitForm() {
+           document.getElementById('downloadForm').method = 'get';
+           document.getElementById('downloadForm').submit();
        }
    </script>
 {% endblock %}

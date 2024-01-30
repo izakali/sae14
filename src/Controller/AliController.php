@@ -20,23 +20,20 @@ class AliController extends AbstractController
     #[Route('/cv', name: 'cv')]
     public function cv(): Response
     {
-        return $this->render('ali/cv.html.twig', [
-        ]);    
+        return $this->render('ali/cv.html.twig');
     }
 
     #[Route('/E-Portfolio', name: 'E-Portfolio')]
     public function portfolio(): Response
     {
-        return $this->render('ali/E-Portfolio.html.twig', [
-        ]);     
+        return $this->render('ali/E-Portfolio.html.twig');
     }
 
     #[Route('/en_savoir_plus', name: 'en_savoir_plus')]
     public function enSavoirPlus(): Response
     {
-        return $this->render('ali/en_savoir+.html.twig', [
-        ]);    
-    }    
+        return $this->render('ali/en_savoir+.html.twig');
+    }
 
     #[Route('/cv/download', name: 'cv_download')]
     public function downloadCV(): Response
