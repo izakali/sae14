@@ -157,6 +157,13 @@ class __TwigTemplate_304e36a17b46276e2f74a8b7c9e82039 extends Template
             <progress id=\"reseau\" value=\"80\" max=\"100\" style=\"width: 400px; height: 60px;\">80%</progress>
         </div>
     </section>
+
+    <div class=\"text-center mt-4\">
+        <a class=\"btn btn-primary\" href=\"";
+        // line 74
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("tp_page");
+        echo "\">Compte Rendu de TP</a>
+    </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -187,7 +194,7 @@ class __TwigTemplate_304e36a17b46276e2f74a8b7c9e82039 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  102 => 15,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  164 => 74,  102 => 15,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -263,6 +270,10 @@ class __TwigTemplate_304e36a17b46276e2f74a8b7c9e82039 extends Template
             <progress id=\"reseau\" value=\"80\" max=\"100\" style=\"width: 400px; height: 60px;\">80%</progress>
         </div>
     </section>
+
+    <div class=\"text-center mt-4\">
+        <a class=\"btn btn-primary\" href=\"{{ path('tp_page') }}\">Compte Rendu de TP</a>
+    </div>
 {% endblock %}
 ", "ali/E-Portfolio.html.twig", "C:\\projet555\\templates\\ali\\E-Portfolio.html.twig");
     }

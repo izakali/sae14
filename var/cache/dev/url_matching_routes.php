@@ -17,6 +17,7 @@ return [
         '/' => [[['_route' => 'app_ali', '_controller' => 'App\\Controller\\AliController::index'], null, null, null, false, false, null]],
         '/cv' => [[['_route' => 'cv', '_controller' => 'App\\Controller\\AliController::cv'], null, null, null, false, false, null]],
         '/E-Portfolio' => [[['_route' => 'E-Portfolio', '_controller' => 'App\\Controller\\AliController::portfolio'], null, null, null, false, false, null]],
+        '/tp' => [[['_route' => 'tp_page', '_controller' => 'App\\Controller\\AliController::tpPage'], null, null, null, false, false, null]],
         '/en_savoir_plus' => [[['_route' => 'en_savoir_plus', '_controller' => 'App\\Controller\\AliController::enSavoirPlus'], null, null, null, false, false, null]],
         '/cv/download' => [[['_route' => 'cv_download', '_controller' => 'App\\Controller\\AliController::downloadCV'], null, null, null, false, false, null]],
     ],
@@ -40,6 +41,7 @@ return [
                         .')'
                     .')'
                 .')'
+                .'|/tp/download/tp([^/]++)(*:225)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -50,8 +52,9 @@ return [
         148 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        191 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        225 => [
+            [['_route' => 'download_tp_report', '_controller' => 'App\\Controller\\AliController::downloadTPReport'], ['reportId'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
